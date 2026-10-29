@@ -1,0 +1,685 @@
+/* ==========================================================================
+   ESTILOS INSTITUCIONALES UAEMÉX - PORTAL EDUCATIVO PREPARATORIA
+   Paleta oficial: Verde Esmeralda (#004A2F / #006338) y Dorado (#C5A059 / #D4AF37)
+   ========================================================================== */
+
+/* Reseteo básico y configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f3f6f4;
+    color: #222222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Espacio superior para el logotipo y encabezado institucional */
+.header-uaem {
+    background: linear-gradient(135deg, #004A2F 0%, #006338 100%);
+    color: #ffffff;
+    border-bottom: 5px solid #C5A059;
+    padding: 15px 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contenedor-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Espacio reservado para el logotipo de la UAEMex */
+.logo-espacio {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px dashed #C5A059;
+}
+
+.logo-uaem-marco {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border: 2px solid #C5A059;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo-uaem-marco svg {
+    width: 42px;
+    height: 42px;
+}
+
+.texto-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-logo .institucion {
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.texto-logo .sub-institucion {
+    font-size: 0.85rem;
+    color: #f7dfa5;
+    font-weight: 500;
+}
+
+.nav-enlace-inicio {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: #004A2F;
+    border: 1.5px solid #C5A059;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-enlace-inicio:hover {
+    background-color: #C5A059;
+    color: #004A2F;
+}
+
+/* Contenido Principal */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 0 20px;
+    flex: 1;
+    width: 100%;
+}
+
+/* Sección central con imagen de cerebro y niños/jóvenes */
+.seccion-central {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 74, 47, 0.08);
+    border-top: 4px solid #004A2F;
+    margin-bottom: 35px;
+}
+
+.ilustracion-cerebro {
+    margin: 0 auto 20px auto;
+    max-width: 480px;
+}
+
+.ilustracion-cerebro svg {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+}
+
+.seccion-central h2 {
+    color: #004A2F;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.seccion-central p {
+    color: #555555;
+    font-size: 1.05rem;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Recuadro de las 3 tarjetas de juegos */
+.recuadro-tarjetas {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 74, 47, 0.08);
+    border-top: 4px solid #C5A059;
+    margin-bottom: 35px;
+}
+
+.titulo-recuadro {
+    text-align: center;
+    color: #004A2F;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+.subtitulo-recuadro {
+    text-align: center;
+    color: #777777;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* Cuadrícula de tarjetas con efecto flip 3D */
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.tarjeta-perspectiva {
+    perspective: 1000px;
+    height: 340px;
+    cursor: pointer;
+}
+
+.tarjeta-interior {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Clase añadida al hacer clic para girar la tarjeta */
+.tarjeta-perspectiva.girada .tarjeta-interior,
+.tarjeta-perspectiva:hover .tarjeta-interior {
+    transform: rotateY(180deg);
+}
+
+.cara-frontal, .cara-posterior {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 14px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Frente de la tarjeta */
+.cara-frontal {
+    background: #ffffff;
+    border: 2px solid #e1e8e4;
+    border-bottom: 5px solid #004A2F;
+}
+
+.icono-juego {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.cara-frontal h3 {
+    color: #004A2F;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.etiqueta-autor {
+    display: inline-block;
+    background-color: #f7dfa5;
+    color: #5a4209;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.instruccion-click {
+    font-size: 0.85rem;
+    color: #888888;
+    margin-top: auto;
+}
+
+/* Reverso de la tarjeta */
+.cara-posterior {
+    background: linear-gradient(145deg, #004A2F 0%, #003622 100%);
+    color: #ffffff;
+    transform: rotateY(180deg);
+    border: 2px solid #C5A059;
+}
+
+.cara-posterior h3 {
+    color: #f7dfa5;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.cara-posterior p {
+    font-size: 0.92rem;
+    line-height: 1.45;
+    margin-bottom: 16px;
+    color: #e5ede7;
+}
+
+.autor-posterior {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.boton-jugar {
+    display: inline-block;
+    background-color: #C5A059;
+    color: #003622;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.15s, background-color 0.15s;
+}
+
+.boton-jugar:hover {
+    background-color: #e2ba6a;
+    transform: scale(1.04);
+}
+
+.boton-proximo {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+    border-radius: 15px;
+    border: 1px dashed #C5A059;
+}
+
+/* ==========================================================================
+   ESTILOS PARA LA PÁGINA 2: CRUCIGRAMA (Carlos Solano)
+   ========================================================================== */
+
+.seccion-crucigrama {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 74, 47, 0.08);
+    border-top: 5px solid #004A2F;
+    margin-bottom: 35px;
+}
+
+.encabezado-juego {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.encabezado-juego h2 {
+    color: #004A2F;
+    font-size: 1.9rem;
+    margin-bottom: 8px;
+}
+
+.credito-autor-juego {
+    color: #8b6b24;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+/* Selector interactivo de temática */
+.bloque-selector-temas {
+    background-color: #f7faf8;
+    border: 2px solid #d8e5dd;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.bloque-selector-temas h4 {
+    color: #004A2F;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.grupo-radios {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.radio-opcion {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 2px solid #C5A059;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    color: #004A2F;
+    transition: all 0.2s;
+}
+
+.radio-opcion input {
+    margin-right: 8px;
+    accent-color: #004A2F;
+}
+
+.radio-opcion:hover {
+    background-color: #fdf5e3;
+}
+
+/* Contenedor del juego en 2 columnas */
+.contenedor-layout-crucigrama {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Columna del crucigrama (Centro) */
+.columna-crucigrama {
+    flex: 1 1 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cuadricula-crucigrama {
+    display: inline-grid;
+    gap: 4px;
+    background: #004A2F;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 15px auto;
+}
+
+.celda-vacia {
+    width: 38px;
+    height: 38px;
+    background-color: #1e2822;
+    border-radius: 4px;
+}
+
+.celda-letra {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    background-color: #ffffff;
+    border: 2px solid #C5A059;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: #004A2F;
+}
+
+.numero-pista {
+    position: absolute;
+    top: 1px;
+    left: 3px;
+    font-size: 0.65rem;
+    color: #C5A059;
+    font-weight: 700;
+}
+
+/* Columna lateral de definiciones y respuestas */
+.columna-definiciones {
+    flex: 1 1 450px;
+    background: #fdfdfd;
+    border: 1px solid #e1e8e4;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.columna-definiciones h3 {
+    color: #004A2F;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #C5A059;
+    padding-bottom: 6px;
+}
+
+.bloque-pista {
+    margin-bottom: 18px;
+    background: #ffffff;
+    border: 1px solid #d9e5dc;
+    border-left: 4px solid #004A2F;
+    padding: 12px 14px;
+    border-radius: 6px;
+}
+
+.bloque-pista.vertical {
+    border-left-color: #C5A059;
+}
+
+.titulo-pista {
+    font-weight: 700;
+    color: #004A2F;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.texto-pista {
+    font-size: 0.9rem;
+    color: #444444;
+    margin-bottom: 8px;
+    line-height: 1.35;
+}
+
+.campo-respuesta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.campo-respuesta label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333333;
+}
+
+.campo-respuesta input {
+    flex: 1;
+    padding: 7px 10px;
+    border: 1.5px solid #004A2F;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-color: #fafffb;
+}
+
+.campo-respuesta input:focus {
+    outline: none;
+    border-color: #C5A059;
+    box-shadow: 0 0 5px rgba(197, 160, 89, 0.5);
+}
+
+/* Botón de verificación */
+.boton-verificar {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #004A2F 0%, #006338 100%);
+    color: #ffffff;
+    border: 2px solid #C5A059;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: transform 0.15s, background-color 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 74, 47, 0.2);
+}
+
+.boton-verificar:hover {
+    background: linear-gradient(135deg, #005a39 0%, #007743 100%);
+    transform: translateY(-2px);
+}
+
+/* Contenedor de resultado del servidor */
+.contenedor-resultado {
+    margin-top: 25px;
+}
+
+.caja-resultado {
+    background-color: #ffffff;
+    border: 2px solid #004A2F;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.caja-resultado h3 {
+    color: #004A2F;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #C5A059;
+    padding-bottom: 5px;
+}
+
+.resumen-puntaje {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+}
+
+.mensaje-exito {
+    background-color: #e4f7eb;
+    color: #0d6335;
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 5px solid #28a745;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.mensaje-parcial {
+    background-color: #fff9e6;
+    color: #7d5a0c;
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 5px solid #C5A059;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.mensaje-fallo {
+    background-color: #fde8e8;
+    color: #9b1c1c;
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 5px solid #dc3545;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.resultado-item {
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.resultado-item.correcto {
+    background-color: #f0faf4;
+    color: #0b5e32;
+    border: 1px solid #c3e6cb;
+}
+
+.resultado-item.incorrecto {
+    background-color: #fff5f5;
+    color: #842029;
+    border: 1px solid #f5c2c7;
+}
+
+/* Ocultación y despliegue según temática elegida */
+.panel-frutas, .panel-valores, .panel-personajes {
+    display: none;
+}
+
+/* Reglas modernas :has() para alternar pestañas temáticas */
+form:has(#radio-frutas:checked) .panel-frutas {
+    display: block;
+}
+
+form:has(#radio-valores:checked) .panel-valores {
+    display: block;
+}
+
+form:has(#radio-personajes:checked) .panel-personajes {
+    display: block;
+}
+
+/* Pie de página institucional UAEMex */
+.footer-uaem {
+    background: #002d1d;
+    color: #ffffff;
+    border-top: 4px solid #C5A059;
+    padding: 22px 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-uaem p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #f7dfa5;
+}
+
+.autores-lista {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.92rem;
+    color: #e5ede7;
+}
+
+.autor-item {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 5px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(197, 160, 89, 0.4);
+}
+
+.autor-item strong {
+    color: #f7dfa5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contenedor-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo-espacio {
+        justify-content: center;
+    }
+    .grupo-radios {
+        flex-direction: column;
+    }
+    .autores-lista {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

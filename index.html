@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Lúdico de Aprendizaje | UAEMéx Preparatoria</title>
+    <!-- Vinculación del archivo de estilos externo -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado Institucional UAEMéx con espacio reservado para el Logotipo -->
+    <header class="header-uaem">
+        <div class="contenedor-header">
+            <div class="logo-espacio" title="Espacio para colocar el logotipo oficial de la UAEMéx">
+                <!-- Marco gráfico para el Logo de la Universidad -->
+                <div class="logo-uaem-marco">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#004A2F" stroke="#C5A059" stroke-width="4"/>
+                        <path d="M50 18 L76 33 L76 67 L50 82 L24 67 L24 33 Z" fill="none" stroke="#C5A059" stroke-width="3"/>
+                        <text x="50" y="47" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">UAEM</text>
+                        <text x="50" y="62" font-size="9" fill="#f7dfa5" text-anchor="middle">1828</text>
+                    </svg>
+                </div>
+                <div class="texto-logo">
+                    <span class="institucion">UAEMéx</span>
+                    <span class="sub-institucion">Dirección de Estudios de Nivel Medio Superior</span>
+                </div>
+            </div>
+
+            <!-- Navegación y enlace de acceso directo al juego del autor -->
+            <nav>
+                <a href="crucigrama.html" class="nav-enlace-inicio">Ir a Crucigrama (Pág. 2) ➔</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="contenedor-principal">
+
+        <!-- Sección Central: Imagen de Cerebro y Niños/Estudiantes Aprendiendo y Jugando -->
+        <section class="seccion-central">
+            <div class="ilustracion-cerebro">
+                <!-- Ilustración vectorial de alta resolución representativa de la mente y aprendizaje lúdico -->
+                <svg viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gradVerde" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#006338"/>
+                            <stop offset="100%" stop-color="#004A2F"/>
+                        </linearGradient>
+                        <linearGradient id="gradOro" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f5d77f"/>
+                            <stop offset="100%" stop-color="#C5A059"/>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Cerebro estilizado central en verde esmeralda y oro -->
+                    <circle cx="250" cy="110" r="85" fill="#f0faf4" stroke="#C5A059" stroke-width="3"/>
+                    <!-- Hemisferio Izquierdo -->
+                    <path d="M 245 45 C 220 40 190 55 190 80 C 175 85 170 105 180 120 C 170 135 180 155 195 160 C 210 175 235 170 245 165 Z" 
+                          fill="url(#gradVerde)" opacity="0.92"/>
+                    <!-- Hemisferio Derecho -->
+                    <path d="M 255 45 C 280 40 310 55 310 80 C 325 85 330 105 320 120 C 330 135 320 155 305 160 C 290 175 265 170 255 165 Z" 
+                          fill="url(#gradVerde)" opacity="0.92"/>
+
+                    <!-- Conexiones neuronales y destellos dorados -->
+                    <path d="M 215 75 Q 235 90 220 110 T 240 145" fill="none" stroke="#C5A059" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M 285 75 Q 265 90 280 110 T 260 145" fill="none" stroke="#C5A059" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="220" cy="110" r="4" fill="#ffffff"/>
+                    <circle cx="280" cy="110" r="4" fill="#ffffff"/>
+                    <circle cx="250" cy="85" r="5" fill="#f5d77f"/>
+
+                    <!-- Estudiante / Niño Jugando 1 (Izquierda) -->
+                    <circle cx="100" cy="95" r="24" fill="#fbd38d"/>
+                    <!-- Cabello -->
+                    <path d="M 78 95 C 78 70 122 70 122 95 Z" fill="#4a2e18"/>
+                    <!-- Sonrisa y ojos -->
+                    <circle cx="93" cy="95" r="3" fill="#2d3748"/>
+                    <circle cx="107" cy="95" r="3" fill="#2d3748"/>
+                    <path d="M 94 104 Q 100 112 106 104" stroke="#c53030" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <!-- Cuerpo -->
+                    <path d="M 76 175 L 86 122 Q 100 118 114 122 L 124 175 Z" fill="#004A2F"/>
+                    <!-- Libro / Cuaderno lúdico -->
+                    <polygon points="110,140 140,128 140,158 110,170" fill="#C5A059"/>
+
+                    <!-- Estudiante / Niña Jugando 2 (Derecha) -->
+                    <circle cx="400" cy="95" r="24" fill="#fbd38d"/>
+                    <!-- Cabello con coletas -->
+                    <path d="M 378 95 C 378 68 422 68 422 95 Z" fill="#804a16"/>
+                    <circle cx="372" cy="100" r="9" fill="#804a16"/>
+                    <circle cx="428" cy="100" r="9" fill="#804a16"/>
+                    <!-- Sonrisa y ojos -->
+                    <circle cx="393" cy="95" r="3" fill="#2d3748"/>
+                    <circle cx="407" cy="95" r="3" fill="#2d3748"/>
+                    <path d="M 394 104 Q 400 112 406 104" stroke="#c53030" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <!-- Cuerpo -->
+                    <path d="M 376 175 L 386 122 Q 400 118 414 122 L 424 175 Z" fill="#C5A059"/>
+                    <!-- Pieza de rompecabezas lúdica -->
+                    <rect x="345" y="135" width="26" height="26" rx="4" fill="#004A2F" stroke="#ffffff" stroke-width="2"/>
+
+                    <!-- Destellos de conocimiento y diversión -->
+                    <polygon points="250,15 254,25 264,25 256,31 259,41 250,35 241,41 244,31 236,25 246,25" fill="#C5A059"/>
+                    <text x="250" y="215" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="16" fill="#004A2F" text-anchor="middle">
+                        GIMNASIA CEREBRAL &bull; APRENDIZAJE ACTIVO
+                    </text>
+                </svg>
+            </div>
+            <h2>¡Desafía tu Mente y Fortalece tus Habilidades!</h2>
+            <p>
+                Bienvenido al portal interactivo de destreza mental para la comunidad estudiantil de Preparatoria.
+                Explora los 3 juegos desarrollados para ejercitar la memoria, agilidad léxica y razonamiento lógico.
+            </p>
+        </section>
+
+        <!-- Recuadro con las 3 Tarjetas de Juegos (Efecto Flip al dar Clic) -->
+        <section class="recuadro-tarjetas">
+            <h2 class="titulo-recuadro">Nuestros Juegos de Memoria y Destreza</h2>
+            <p class="subtitulo-recuadro">Haz clic en cada tarjeta para girarla y conocer sus detalles</p>
+
+            <div class="grid-tarjetas">
+
+                <!-- TARJETA 1: CRUCIGRAMA (Autor: Carlos Solano) -->
+                <div class="tarjeta-perspectiva" id="tarjeta-1" title="Haz clic para girar la tarjeta">
+                    <div class="tarjeta-interior">
+                        <!-- Cara Frontal -->
+                        <div class="cara-frontal">
+                            <div class="icono-juego">🧩</div>
+                            <h3>Crucigrama</h3>
+                            <span class="etiqueta-autor">Autor: Carlos Solano</span>
+                            <span class="instruccion-click">👆 Clic para voltear</span>
+                        </div>
+                        <!-- Cara Posterior -->
+                        <div class="cara-posterior">
+                            <h3>Crucigrama</h3>
+                            <p>
+                                Pon a prueba tu léxico, vocabulario y conocimientos generales resolviendo pistas
+                                horizontales y verticales en tres temáticas dinámicas preparatorianas.
+                            </p>
+                            <div class="autor-posterior">Programado por: Carlos Solano</div>
+                            <a href="crucigrama.html" class="boton-jugar">Jugar Crucigrama (Pág. 2) ➔</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TARJETA 2: JUEGO DE MEMORIA (Autora: Diana) -->
+                <div class="tarjeta-perspectiva" id="tarjeta-2" title="Haz clic para girar la tarjeta">
+                    <div class="tarjeta-interior">
+                        <!-- Cara Frontal -->
+                        <div class="cara-frontal">
+                            <div class="icono-juego">🃏</div>
+                            <h3>Juego de Memoria</h3>
+                            <span class="etiqueta-autor">Autora: Diana</span>
+                            <span class="instruccion-click">👆 Clic para voltear</span>
+                        </div>
+                        <!-- Cara Posterior -->
+                        <div class="cara-posterior">
+                            <h3>Memoria Visual</h3>
+                            <p>
+                                Estimula la retención visual y la concentración emparejando tarjetas ocultas en el menor tiempo
+                                y número de intentos posibles.
+                            </p>
+                            <div class="autor-posterior">Programado por: Diana</div>
+                            <span class="boton-proximo">Módulo en Desarrollo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TARJETA 3: SOPA DE LETRAS (Autor: Dilan) -->
+                <div class="tarjeta-perspectiva" id="tarjeta-3" title="Haz clic para girar la tarjeta">
+                    <div class="tarjeta-interior">
+                        <!-- Cara Frontal -->
+                        <div class="cara-frontal">
+                            <div class="icono-juego">🔍</div>
+                            <h3>Sopa de Letras</h3>
+                            <span class="etiqueta-autor">Autor: Dilan</span>
+                            <span class="instruccion-click">👆 Clic para voltear</span>
+                        </div>
+                        <!-- Cara Posterior -->
+                        <div class="cara-posterior">
+                            <h3>Sopa de Letras</h3>
+                            <p>
+                                Desarrolla la rapidez de búsqueda y reconocimiento de patrones encontrando palabras
+                                clave ocultas en una cuadrícula alfanumérica.
+                            </p>
+                            <div class="autor-posterior">Programado por: Dilan</div>
+                            <span class="boton-proximo">Módulo en Desarrollo</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página Institucional con los Autores del Proyecto -->
+    <footer class="footer-uaem">
+        <p><strong>Universidad Autónoma del Estado de México</strong> &bull; Plantel de la Escuela Preparatoria</p>
+        <div class="autores-lista">
+            <span class="autor-item">🧩 Primer Autor: <strong>Carlos Solano</strong> (Crucigrama)</span>
+            <span class="autor-item">🃏 Segundo Autor: <strong>Diana</strong> (Memoria)</span>
+            <span class="autor-item">🔍 Tercer Autor: <strong>Dilan</strong> (Sopa de letras)</span>
+        </div>
+    </footer>
+
+    <!-- Vinculación del archivo JavaScript externo -->
+    <script src="js/script.js"></script>
+</body>
+</html>

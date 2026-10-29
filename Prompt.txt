@@ -1,0 +1,40 @@
+Actúa como un desarrollador web senior full-stack. Necesito que desarrolles una funcionalidad web completa compuesta estrictamente por 3 archivos independientes:
+
+1. index.html (Estructura semántica y lógica de cliente en JS)
+2. styles.css (Estilos visuales, layout y diseño responsivo)
+3. api.php (Lógica del backend y procesamiento de datos)
+
+[DESCRIPCIÓN DEL PROYECTO]
+- Objetivo: Crear una pagina web que contenga 3 juegos de memoria, cada juego debe de venir en una pagina diferente, en la pagina de inicio debe venir una imagen de un cerebro y niños jugando. Esta imagen debe estar ubicada a en el centro de la pagina de inicio. Debajo de esta imagen debe haber un recuadro con 3 tarjetas, en cada una de las tarjetas debe venir especificado cada juego. Al momento de hacer click en ellas, deben girar para darnos el nombre del juego y una breve descripción. Como pie de pagina deben venir los nombres de los creadores del código de cada juego. A mi Carlos Solano me toco el crucigrama, a Diana le toco el juego de memoria, y a Dilan la sopa de letras. 
+- Entradas del usuario: [Campos del formulario, botones, filtros, etc.]
+- Procesamiento en servidor: [Validar campos, calcular resultado, guardar en archivo JSON/BD, etc.]
+- Estructura o diseño: En la pagina 2 va a estar destinada a mi juego, el crucigrama. Debe tener el titulo, imágenes llamativas para niños y el juego en el centro de la pagina. A un costado del crucigrama deben venir las definiciones de las palabras en vertical y horizontal. Para que el usuario pueda saber que palabras usar. 
+-Funcionalidad: El usuario debe poder elegir la temática de su crucigrama, dando click en uno de las siguientes opciones: Frutas/Verduras, Valores/Sentimientos, Personajes Históricos/Películas. Al final cuando el usuario verifique 
+
+[REQUISITOS TÉCNICOS POR ARCHIVO Y CARPETA]
+
+1. index.html (Estructura base en la raíz):
+   - Estructura HTML5 mínima y fácil de leer.
+   - Vincula el archivo de estilos en la ruta "css/estilos.css".
+   - Vincula el archivo JavaScript en la ruta "js/script.js" mediante la etiqueta <script src="...">.
+   - Contiene únicamente las etiquetas del formulario y un elemento contenedor (por ejemplo, <p id="resultado"></p>) para mostrar la respuesta del servidor.
+
+2. css/estilos.css (Estilos en su propia carpeta):
+   - Ubicado exclusivamente en la carpeta "css/".
+   - Reglas de estilo básicas y directas aplicadas a etiquetas o selectores simples.
+   - Código plano y fácil de entender, sin variables CSS complejas ni arquitecturas avanzadas.
+
+3. js/script.js (Lógica de cliente en su propia carpeta):
+   - Ubicado exclusivamente en la carpeta "js/".
+   - Prohibido declarar o definir funciones personalizadas (sin `function miFuncion()`, ni funciones de flecha nombradas `const fn = () =>`).
+   - Lógica secuencial y plana: selecciona los elementos con `document.getElementById()`, captura el evento de envío del formulario y ejecuta una petición `fetch()` directa apuntando a "php/servidor.php".
+   - Toma la respuesta del servidor y la asigna directamente a la propiedad `.innerText` o `.innerHTML` del contenedor en pantalla.
+
+4. php/servidor.php (Backend en su propia carpeta):
+   - Ubicado exclusivamente en la carpeta "php/".
+   - Prohibido declarar funciones o clases personalizadas.
+   - Procesamiento directo y lineal: lee el valor desde `$_POST`, aplica una limpieza básica (como `trim()` y `htmlspecialchars()`) e imprime la respuesta directamente con `echo`.
+
+[FORMATO DE ENTREGA]
+- Entrega el código completo de cada archivo por separado dentro de bloques de código Markdown con el nombre del archivo como encabezado.
+- No omitas código ni uses comentarios tipo "// escribe aquí tu lógica".
